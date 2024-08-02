@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="text"]:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="{{ url_for('prediction') }}" method="post">
+        <label for="N">N</label>
+        <input type="text" name="N" id="N">
+
+        <label for="P">P</label>
+        <input type="text" name="P" id="P">
+
+        <label for="K">K</label>
+        <input type="text" name="K" id="K">
+
+        <label for="temp">Temperature</label>
+        <input type="text" name="temp" id="temp">
+
+        <label for="humidity">Humidity</label>
+        <input type="text" name="humidity" id="humidity">
+
+        <label for="ph">pH</label>
+        <input type="text" name="ph" id="ph">
+
+        <label for="rainfall">Rainfall</label>
+        <input type="text" name="rainfall" id="rainfall">
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
